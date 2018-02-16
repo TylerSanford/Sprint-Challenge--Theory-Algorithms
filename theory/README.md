@@ -48,7 +48,7 @@ determine how this is coded.
 ## State Machines
 
 > A useful tool for drawing state machines is [Evan's FSM
-> Designer](http://madebyevan.com/fsm/).
+> Designer](http://madebyevan.com/ffsm/).
 
 * Draw a state machine that corresponds to the following regex:
 
