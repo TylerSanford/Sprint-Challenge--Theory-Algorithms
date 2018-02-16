@@ -10,6 +10,14 @@ both `antelope` and `antelopes`.)
     antelope rocks out
     antelopes rock out
 
+#### Answer
+If you want to match the following, exactly
+  /antelope[s]?[ ]rock[s]?[ ]out/g 
+But if you it can't be within other words, or the plurality can't be changed, 
+add \b and put the rest within a capture group.
+  /\b(antelope[s]?[ ]rock[s]?[ ]out)\b/g
+
+
 * Regex that matches either of:
 
     goat
@@ -19,14 +27,23 @@ both `antelope` and `antelopes`.)
 
     boat
 
+#### Answer
+What is asked is very gready. There could be other matches or non-matches that could
+determine how this is coded.
+  /[gm]oat/g
+
+
 * Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
   month and day can each be 1-2 digits). This does not need to verify the date
-  is correct (e.g 33333-33-33 can match).
+  is correct (e.g 3333-33-33 can match).
 
   2000-10-12
   1999-1-20
   1999-01-20
   812-2-10
+
+#### Answer
+/[\d]{1,4}-[\d]{1,2}-[\d]{1,2}/g
 
 ## State Machines
 
@@ -42,7 +59,7 @@ both `antelope` and `antelopes`.)
 
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
   machine diagram for the lion and label the transition events that
-  cause state transitions.
+  cause state transitions. - DONE
 
 * The VT-100 terminal (console) outputs text to the screen as it
   receives it over the wire. One exception is that when it receives an
@@ -55,12 +72,16 @@ both `antelope` and `antelopes`.)
 
       ESC[1m
 
-  changes the font to bold.
+  changes the font to stabold.
 
   * Come up with regexes for the two above sequences. The one to set the
     cursor position should accept any digits for the row and column. The
     bold sequence need only accept `1` (and is a trivial regex). (ESC is
     a single character which can be represented with `\e` in the regex.)
+
+    #### ANSWERS
+    /\e\d+;\d+f/
+    /\e\dm/
 
   * Draw a state machine diagram for a VT-100 that can consume regular
     character sequences as well as the two above ESC sequences.
