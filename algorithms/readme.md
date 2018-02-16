@@ -1,16 +1,16 @@
-#Tyler Sanford Answers
-##Analysis of Algorithms
-###Excercise I.
-####A.
+# Tyler Sanford Answers
+## Analysis of Algorithms
+### Excercise I.
+#### A.
 
-####B.
+#### B.
 
-####C.
+#### C.
 
-####D.
+#### D.
 
-####E.
+#### E.
 
-####F.
+#### F.
 
-####G.
+#### G.
